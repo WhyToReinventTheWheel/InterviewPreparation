@@ -4,7 +4,9 @@
   - Serialization  
   - Exception Handling 
   - Collection 
+  - Generics 
   - Thread 
+* JDBC and Spring JDBC Template
 * Spring
 * Sql
 * Hibernate
