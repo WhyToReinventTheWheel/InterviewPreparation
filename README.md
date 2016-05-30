@@ -13,5 +13,8 @@
   - JMX
   - JSON
   - JAXB
+* Data Structure
+* Algorithm 
+* Design Patterns
   
   
