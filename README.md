@@ -6,17 +6,18 @@
   - Collection 
   - Generics 
   - Thread 
-* JDBC and Spring JDBC Template
 * Spring
 * Sql
+* JDBC and Spring JDBC Template
 * Hibernate
 * Tools 
   - JMS 
   - JMX
   - JSON
   - JAXB
+* Design Patterns
 * Data Structure
 * Algorithm 
-* Design Patterns
+
   
   
