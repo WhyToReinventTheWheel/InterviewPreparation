@@ -6,9 +6,16 @@
   - Collection 
   - Generics 
   - Thread 
+  - JDBC
 * Spring
+  - IOC
+  - DI
+  - AOP
+  - MVC
+  - Transaction
+  - JDBC Template
+  - JMS Template
 * Sql
-* JDBC and Spring JDBC Template
 * Hibernate
 * Tools 
   - JMS 
