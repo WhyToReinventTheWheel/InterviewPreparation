@@ -1,5 +1,7 @@
 # InterviewPreparation
 * Core Java
+  - Marker interface 
+  - Immutable class
   - Reflection
   - Serialization  
   - Exception Handling 
