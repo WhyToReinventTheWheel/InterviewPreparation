@@ -1,5 +1,8 @@
 # InterviewPreparation
 * Core Java
+  - how to make custom annotation 
+  - Marker interface 
+  - Immutable class
   - Reflection
   - Serialization  
   - Exception Handling 
