@@ -30,6 +30,7 @@
   - Transaction
   - JDBC Template
   - JMS Template
+  - Spring Data
 * Sql
 * Hibernate
 * Others
