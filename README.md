@@ -11,7 +11,7 @@
   - Generics 
   - Thread 
     - Basic Thread Concept
-      - Volatile, Join, Synchronization, Lock, wait and notify,Latch, Thread Local, Cyclic barrier, Semaphores, Mutex
+      - Volatile, Join, Synchronization, Lock, wait and notify,Latch, Thread Local, Cyclic barrier, Semaphores, Mutex, Atomic Variable
     - Executor 
       - thread pool(Fix,Cached,Signle), completion service, Thread Factory, Future and callable
     - Fork
