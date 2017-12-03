@@ -2,7 +2,7 @@
 * Core Java
   - Java Memory Management
   - how to make custom annotation 
-  - Marker interface 
+  - Marker interface (Serializable, Clonnable)
   - Immutable class
   - Reflection
   - Serialization  
