@@ -31,6 +31,7 @@
   - JDBC Template
   - JMS Template
   - Spring Data
+  - Spring Batch
 * Sql
 * Hibernate
 * Others
