@@ -45,4 +45,8 @@
 * Algorithm 
 * AWS
   
-  
+ # Resource
+  * Data Structure https://www.youtube.com/watch?v=92S4zgXN17o&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=1
+  * MIT Open Courseware (Intro to Algorithms)
+    - https://www.youtube.com/watch?v=HtSuA80QTyo&index=1&list=PLSX2U_ZE4Huk19DPn34oZlygPbsig380X
+  * https://www.youtube.com/watch?v=5KB5KAak6tM
