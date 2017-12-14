@@ -55,8 +55,6 @@
 	15 . How sessions works in Spring
 	16. Different way of loading Application Context
 
-
-
 # Hibernate
 
 	1. How hibernate works
@@ -78,19 +76,8 @@
 	17.How can we set isolation used by transaction annotation
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 # MIX
+
 	difference between jre, jdk and jvm
 	What is EJB session bean?
 	Types of memory area?
