@@ -90,89 +90,85 @@
 
 
 
+# MIX
+	difference between jre, jdk and jvm
+	What is EJB session bean?
+	Types of memory area?
+	Unix command to get the processor running of a particular user
+	insertion and searching and why?
+	what is hibernate
+	How will you design to allow multiple JVMs to access data?
+	What is dependency injection in Spring
+	How will you sort HashMap
+	fork/join
+	How to select a specific controller?
+	Internal working of hash table, hash code?
+	Explain any design pattern except singleton?
+	Explain Synchronization
+	what is serializable? How to make a class serializable ?
+	What is benefit of indexes in database
+	what is serializable? How to make a class serializable ?
+	Explain HashMap, Set, Arraylist
+	Difference between Comparable and Comparator
+	Difference between Arraylist and Hashmap
+	Explain singleton design pattern
+	Why do  you specify a hibernate dialect in configuration?
+	How to implement a interceptor?
+	What is trading done in your application
+	Give the differences between Arraylist and hashmap 
+	What are futures, options, repo 
+	hashmap implementation
+	What is portlet API
+	hashmap vs treemap
+	What is the use of Executor service completion method
+	final finally finalize
+	Tree Map and linked hash map
+	Types of memory area?
+	volatile keyword in java
+	diff b/w soap and rest
+	How did you use inheritance to resolve issue in your project?
+	How did you use encapsulation in your project?
+	How did you implement exception handling in your project?
+	Why have you created your custom exception?
+	What is MVC framework?
+	What is the flow of MVC architecture?
+	How to select a specific controller?
+	Why do you specify a hibernate dialect in configuration?
+	What is EJB session bean?
+	Suppose you have 30%  A type data and 70% B type data which collection to use for frequent deletion, insertion and searching and why?
+	Internal  working of hash table, hash code?
+	Explain any design pattern except singleton?
+	Flow of MVC architecture?
+	IOC container?
+	How to specify a class as controller and modification in configuration file?
+	What is AOP?
+	How did you implement security in your project?
+	How to implement a interceptor?
+	Difference between interceptor and controller?
 
+# Miscellaneous
 
-difference between jre, jdk and jvm
-What is EJB session bean?
-Types of memory area?
-Unix command to get the processor running of a particular user
-insertion and searching and why?
-what is hibernate
-How will you design to allow multiple JVMs to access data?
-What is dependency injection in Spring
-How will you sort HashMap
-fork/join
-How to select a specific controller?
-Internal working of hash table, hash code?
-Explain any design pattern except singleton?
-Explain Synchronization
-what is serializable? How to make a class serializable ?
-What is benefit of indexes in database
-what is serializable? How to make a class serializable ?
-Explain HashMap, Set, Arraylist
-Difference between Comparable and Comparator
-Difference between Arraylist and Hashmap
-Explain singleton design pattern
-Why do  you specify a hibernate dialect in configuration?
-How to implement a interceptor?
-What is trading done in your application
-Give the differences between Arraylist and hashmap 
-What are futures, options, repo 
-hashmap implementation
-What is portlet API
-hashmap vs treemap
-What is the use of Executor service completion method
-final finally finalize
-Tree Map and linked hash map
-Types of memory area?
-volatile keyword in java
-diff b/w soap and rest
-
-
-How did you use inheritance to resolve issue in your project?
-How did you use encapsulation in your project?
-How did you implement exception handling in your project?
-Why have you created your custom exception?
-What is MVC framework?
-What is the flow of MVC architecture?
-How to select a specific controller?
-Why do you specify a hibernate dialect in configuration?
-What is EJB session bean?
-Suppose you have 30%  A type data and 70% B type data which collection to use for frequent deletion, insertion and searching and why?
-Internal  working of hash table, hash code?
-Explain any design pattern except singleton?
-
-
-Flow of MVC architecture?
-IOC container?
-How to specify a class as controller and modification in configuration file?
-What is AOP?
-How did you implement security in your project?
-How to implement a interceptor?
-Difference between interceptor and controller?
-
-Miscellaneous
-1)	DCN – runtime notification 
-2)	How to implement Order by Like Sql in comparator interface in Collection.
-3)	Batch Process + Transaction 
-a.	Batch Process + Transaction  
-4)	Exception handling -> how to find actual cause when wrapping at multiple level
-a.	Exp.getCause()
-5)	Concurrent hasMap how to write efficient logic in multi thread environment if trades are coming more than 10,000/sec updates 
-6)	How to decide the thread pool size , 8 cores, 12 GB RAM
-7)	Builder design pattern disadvantage 
-8)	How to decide/design asynchronous system
-9)	Disadvantage of EhCache 
-10)	Exception in thread how you will capture in main thread
-11)	Core call blocking forever in thread pool how to resolve this situation 
-12)	Marker interface 
-13)	Using Multithread to core but one thread writing to core ,but one thread writing to concurrent hashmap ,is it equal to single thread environment.
-14)	Array of 10 elements, how multiple thread can write efficiently.
-15)	 How you decide the size of thread pool.
-16)	GC logs , Young generation , old generation …what is the means if old generation increasing.
-17)	Batch Request in SQL 
-18)	Websocket 
-19)	Why Weblogic needs to restart if RAM allocated to Weblogic process 18GB.
+	1)	DCN – runtime notification 
+	2)	How to implement Order by Like Sql in comparator interface in Collection.
+	3)	Batch Process + Transaction 
+	a.	Batch Process + Transaction  
+	4)	Exception handling -> how to find actual cause when wrapping at multiple level
+	a.	Exp.getCause()
+	5)	Concurrent hasMap how to write efficient logic in multi thread environment if trades are coming more than 10,000/sec updates 
+	6)	How to decide the thread pool size , 8 cores, 12 GB RAM
+	7)	Builder design pattern disadvantage 
+	8)	How to decide/design asynchronous system
+	9)	Disadvantage of EhCache 
+	10)	Exception in thread how you will capture in main thread
+	11)	Core call blocking forever in thread pool how to resolve this situation 
+	12)	Marker interface 
+	13)	Using Multithread to core but one thread writing to core ,but one thread writing to concurrent hashmap ,is it equal to single thread environment.
+	14)	Array of 10 elements, how multiple thread can write efficiently.
+	15)	 How you decide the size of thread pool.
+	16)	GC logs , Young generation , old generation …what is the means if old generation increasing.
+	17)	Batch Request in SQL 
+	18)	Websocket 
+	19)	Why Weblogic needs to restart if RAM allocated to Weblogic process 18GB.
  
 XML Parsing
  
