@@ -50,3 +50,4 @@
   * MIT Open Courseware (Intro to Algorithms)
     - https://www.youtube.com/watch?v=HtSuA80QTyo&index=1&list=PLSX2U_ZE4Huk19DPn34oZlygPbsig380X
   * https://www.youtube.com/watch?v=5KB5KAak6tM
+  * https://www.journaldev.com/2167/java-exception-interview-questions-and-answers
