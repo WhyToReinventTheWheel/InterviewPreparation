@@ -77,4 +77,18 @@ public static < E > void printArray( E[] inputArray ) {
 Integer[] intArray = { 1, 2, 3, 4, 5 };
 printArray(intArray);
 ```
+- Generic Classes
+```
+public class Box<T> {
+   private T t;
+   public void add(T t) {
+      this.t = t;
+   }
+   public T get() {
+      return t;
+   }
+}
 
+Box<Integer> integerBox = new Box<Integer>();
+System.out.printf("Integer Value :%d\n\n", integerBox.get());
+```
