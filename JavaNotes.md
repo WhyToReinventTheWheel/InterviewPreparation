@@ -63,3 +63,18 @@ public class Salary extends Employee {
    }
 }
 ```
+
+### Generics
+- Methods
+```
+public static < E > void printArray( E[] inputArray ) {
+   for(E element : inputArray) {
+      System.out.printf("%s ", element);
+   }
+   System.out.println();
+}
+
+Integer[] intArray = { 1, 2, 3, 4, 5 };
+printArray(intArray);
+```
+
