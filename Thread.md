@@ -1,4 +1,5 @@
 ### 01 Thread 
+
 - Anonymous
 ```
 Thread t = new Thread(new Runnable() {
@@ -6,5 +7,8 @@ Thread t = new Thread(new Runnable() {
 	public void run() {
 	}
 });
-
+```
+- Java lambda
+```
+Runnable runnable = () -> {}
 ```
