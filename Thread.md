@@ -39,6 +39,33 @@ daemonThread.setDaemon(true);
 daemonThread.start();
 ```
 
+## Interrupts
+- Many methods that throw InterruptedException, such as sleep, are designed to cancel their current operation and return immediately when an interrupt is received.
+```
+try {
+        Thread.sleep(4000);
+} catch (InterruptedException e) {
+// We've been interrupted: no execution
+return;
+}
+```
+- 2nd way , Thread.interrupted, which returns true if an interrupt has been received
+```
+for (int i = 0; i < inputs.length; i++) {
+    heavyCrunch(inputs[i]);
+    if (Thread.interrupted()) {
+        // We've been interrupted: no more crunching.
+        return;
+    }
+}
+
+OR 
+Throw error 
+if (Thread.interrupted()) {
+    throw new InterruptedException();
+}
+```
+
 ## Executors
 - newFixedThreadPool
 ```
