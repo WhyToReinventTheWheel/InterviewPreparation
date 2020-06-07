@@ -41,4 +41,46 @@ public class NamedThreadsFactory implements ThreadFactory {
 }
 ```
 
-### 
+### ReturningValues
+- Callable
+```
+public class CalculationTaskA implements Callable<Integer> {
+	@Override
+	public Integer call() throws Exception {
+		return a + b;
+	}
+}
+```
+- Runnable
+```
+public class LoopTaskA implements Runnable {
+	@Override
+	public void run() {
+	}
+}
+```
+- ExecutorService
+```
+ExecutorService execService = Executors.newCachedThreadPool();
+Future<Integer> result1 = execService.submit(new CalculationTaskA(2, 3, 2000));
+Future<?> result4       = execService.submit(new LoopTaskA());
+Future<Double> result5  = execService.submit(new LoopTaskA(), 999.888);
+
+execService.shutdown();
+try {
+	System.out.println("Result-1 = " + result1.get());
+	System.out.println("Result-4 = " + result4.get());
+	System.out.println("Result-5 = " + result5.get());
+} catch (InterruptedException | ExecutionException e) {
+	e.printStackTrace();
+}
+```
+- Result 
+```
+--------------------
+Result-1 = 5
+Result-4 = null
+Result-5 = 999.888
+--------------------
+```
+- 
