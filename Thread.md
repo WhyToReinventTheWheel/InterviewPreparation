@@ -83,4 +83,22 @@ Result-4 = null
 Result-5 = 999.888
 --------------------
 ```
-- 
+
+### CompletionService
+
+```
+ExecutorService execService = Executors.newCachedThreadPool();
+CompletionService<Integer> tasks = new ExecutorCompletionService<Integer>(execService);
+tasks.submit(new CalculationTaskA(2, 3, 2000));
+tasks.submit(new CalculationTaskA(3, 4, 1000));
+tasks.submit(new CalculationTaskA(4, 5, 500));
+tasks.submit(new LoopTaskA(), 10);
+execService.shutdown();
+for (int i = 0; i < 4; i++) {
+	try {
+		System.out.println(tasks.take().get());
+	} catch (InterruptedException | ExecutionException e) {
+		e.printStackTrace();
+	}
+}
+```
