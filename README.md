@@ -1,5 +1,9 @@
 # InterviewPreparation
 * Core Java
+  - Java8 
+    - Lambda
+    - Stream API
+    - Functional Interface
   - Java Memory Management
   - how to make custom annotation 
   - Marker interface (Serializable, Clonnable)
@@ -10,10 +14,7 @@
   - Collection 
   - Generics 
   - JDBC
-  - Java8 
-    - Lambda
-    - Stream API
-    - Functional Interface
+  
 * Thread 
   - Basic Thread Concept
     - Volatile, Join, Synchronization, Lock, wait and notify,Latch, Thread Local, Cyclic barrier, Semaphores, Mutex, Atomic Variable
