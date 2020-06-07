@@ -1,4 +1,4 @@
-### 01 Thread 
+### Thread 
 
 - Anonymous
 ```
@@ -13,7 +13,7 @@ Thread t = new Thread(new Runnable() {
 Runnable runnable = () -> {}
 ```
 
-### 02 Executors
+### Executors
 - newFixedThreadPool
 ```
 ExecutorService execService = Executors.newFixedThreadPool(2);
@@ -26,7 +26,7 @@ execService.execute(new LoopTaskA()); // java.util.concurrent.RejectedExecutionE
 - ExecutorService execService = Executors.newSingleThreadExecutor();
 - ExecutorService execService = Executors.newCachedThreadPool();
 
-### 03 NamingExecutorThreads
+### NamingExecutorThreads
 - ExecutorService execService = Executors.newCachedThreadPool(new NamedThreadsFactory());
 ```
 public class NamedThreadsFactory implements ThreadFactory {
