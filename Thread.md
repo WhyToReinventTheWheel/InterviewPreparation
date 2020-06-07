@@ -1,11 +1,11 @@
 # Topic 
 - Basic Thread Concept
-	- Volatile, Join, Synchronization, Lock, wait and notify,Latch, Thread Local, Cyclic barrier, Semaphores, Mutex, Atomic Variable
+ - Volatile, Join, Synchronization, Lock, wait and notify,Latch, Thread Local, Cyclic barrier, Semaphores, Mutex, Atomic Variable
 - Executor 
-	- thread pool(Fix,Cached,Signle), completion service, Thread Factory, Future and callable
+ - thread pool(Fix,Cached,Signle), completion service, Thread Factory, Future and callable
 - Fork
 - Concurrent Collection 
-	- Blocking Queue, Delay Queue, Priority Queue, Concurrent Maps
+ - Blocking Queue, Delay Queue, Priority Queue, Concurrent Maps
     
 ## Thread 
 
