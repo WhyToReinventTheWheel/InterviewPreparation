@@ -9,7 +9,7 @@
 - Deadlock
 - Thread dump analyzer
 
-## Thread 
+## Thread Creation
 
 - Anonymous
 ```
