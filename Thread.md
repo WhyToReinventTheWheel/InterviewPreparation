@@ -139,3 +139,22 @@ t1.start();
 System.out.println(task1.getSum());
 
 ```
+
+- Another way to add listener 
+
+```
+public interface ResultListener<T> {
+	void notifyResult(T result);
+}
+
+public class ValueReturningTaskB implements Runnable {
+	private ResultListener<Integer> listener;
+	public ValueReturningTaskB(ResultListener<Integer> listener) {
+		this.listener = listener;
+	}
+	@Override
+	public void run() {
+		listener.notifyResult(sum);
+	}
+}
+```
