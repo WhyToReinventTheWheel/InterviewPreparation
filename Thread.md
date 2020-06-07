@@ -6,7 +6,9 @@
 - Fork
 - Concurrent Collection 
 	- Blocking Queue, Delay Queue, Priority Queue, Concurrent Maps
-    
+- Deadlock
+- Thread dump analyzer
+
 ## Thread 
 
 - Anonymous
