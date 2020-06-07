@@ -1,4 +1,4 @@
-### Thread 
+## Thread 
 
 - Anonymous
 ```
@@ -13,7 +13,7 @@ Thread t = new Thread(new Runnable() {
 Runnable runnable = () -> {}
 ```
 
-### Executors
+## Executors
 - newFixedThreadPool
 ```
 ExecutorService execService = Executors.newFixedThreadPool(2);
@@ -26,7 +26,7 @@ execService.execute(new LoopTaskA()); // java.util.concurrent.RejectedExecutionE
 - ExecutorService execService = Executors.newSingleThreadExecutor();
 - ExecutorService execService = Executors.newCachedThreadPool();
 
-### NamingExecutorThreads
+## NamingExecutorThreads
 - ExecutorService execService = Executors.newCachedThreadPool(new NamedThreadsFactory());
 ```
 public class NamedThreadsFactory implements ThreadFactory {
@@ -41,7 +41,7 @@ public class NamedThreadsFactory implements ThreadFactory {
 }
 ```
 
-### ReturningValues
+## ReturningValues
 - Callable
 ```
 public class CalculationTaskA implements Callable<Integer> {
@@ -84,7 +84,7 @@ Result-5 = 999.888
 --------------------
 ```
 
-### CompletionService
+## CompletionService
 
 ```
 ExecutorService execService = Executors.newCachedThreadPool();
