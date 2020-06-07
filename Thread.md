@@ -102,3 +102,40 @@ for (int i = 0; i < 4; i++) {
 	}
 }
 ```
+
+## Thread Returning Value
+- Runnable
+```
+public class ValueReturningTaskA implements Runnable {
+	private volatile boolean done = false;
+	@Override
+	public void run() {
+		TimeUnit.MILLISECONDS.sleep(sleepTime);
+		done = true;
+		synchronized(this) {
+			this.notifyAll();
+		}
+	}
+	public int getSum() {
+		if (!done) {
+			synchronized(this) {
+				try {
+					this.wait();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return sum;
+	}
+}
+```
+
+- Setup 
+```
+ValueReturningTaskA task1 = new ValueReturningTaskA(2, 3, 2000);
+Thread t1 = new Thread(task1, "Thread-1");
+t1.start();
+System.out.println(task1.getSum());
+
+```
