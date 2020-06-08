@@ -68,6 +68,52 @@ public class MsLunch {
     }
 } 
 ```
+
+## Locks in Java
+```
+private Lock lock = new Lock();
+lock.lock();
+try{
+  //do critical section code, which may throw exception
+} finally {
+ lock.unlock();
+}
+```
+
+## Read / Write Locks in Java
+A read / write lock is more sophisticated lock than the Lock implementations shown in the text Locks in Java. Imagine you have an application that reads and writes some resource, but writing it is not done as much as reading it is. Two threads reading the same resource does not cause problems for each other, so multiple threads that want to read the resource are granted access at the same time, overlapping. But, if a single thread wants to write to the resource, no other reads nor writes must be in progress at the same time. To solve this problem of allowing multiple readers but only one writer, you will need a read / write lock.
+- Read / Write Lock Java Implementation
+`Read Access`   	If no threads are writing, and no threads have requested write access.
+`Write Access`   	If no threads are reading or writing.
+
+If a thread wants to read the resource, it is okay as long as no threads are writing to it, and no threads have requested write access to the resource. By up-prioritizing write-access requests we assume that write requests are more important than read-requests. Besides, if reads are what happens most often, and we did not up-prioritize writes, starvation could occur. Threads requesting write access would be blocked until all readers had unlocked the ReadWriteLock. If new threads were constantly granted read access the thread waiting for write access would remain blocked indefinately, resulting in starvation. Therefore a thread can only be granted read access if no thread has currently locked the ReadWriteLock for writing, or requested it locked for writing.
+
+A thread that wants write access to the resource can be granted so when no threads are reading nor writing to the resource. It doesn't matter how many threads have requested write access or in what sequence, unless you want to guarantee fairness between threads requesting write access.
+
+
+```
+ReadWriteLock rwLock = new ReentrantReadWriteLock();
+Lock readLock = rwLock.readLock();
+Lock writeLock = rwLock.writeLock();
+readLock.lock();
+try {
+    // reading data
+} finally {
+    readLock.unlock();
+}
+
+writeLock.lock();
+ 
+try {
+    // update data
+} finally {
+ 
+    writeLock.unlock();
+}
+```
+## Blocking Queues
+A blocking queue is a queue that blocks when you try to dequeue from it and the queue is empty, or if you try to `enqueue` items to it and the queue is already full. A thread trying to `dequeue` from an empty queue is blocked until some other thread inserts an item into the queue. A thread trying to enqueue an item in a full queue is blocked until some other thread makes space in the queue, either by dequeuing one or more items or clearing the queue completely.
+
 ## ThreadLocal
 The Java ThreadLocal class enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to the same ThreadLocal variable, the two threads cannot see each other's ThreadLocal variables. Thus, the Java ThreadLocal class provides a simple way to make code thread safe that would not otherwise be so.
 ```
@@ -114,6 +160,11 @@ The situation is illustrated below:
 Thread 1  locks A, waits for B
 Thread 2  locks B, waits for A
 
+- Deadlock Prevention
+ - Lock Ordering
+ - Lock Timeout
+ - Deadlock Detection
+ 	Deadlock detection is a heavier deadlock prevention mechanism aimed at cases in which lock ordering isn't possible, and lock timeout isn't feasible. Every time a thread takes a lock it is noted in a data structure (map, graph etc.) of threads and locks. Additionally, whenever a thread requests a lock this is also noted in this data structure.
 ## Interrupts
 - public void interrupt() Interrupts this thread.  // thread.interrupt() 
 - Thread.currentThread().interrupt();
