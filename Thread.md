@@ -40,6 +40,8 @@ daemonThread.start();
 ```
 
 ## Interrupts
+- public void interrupt() Interrupts this thread.  // thread.interrupt() 
+- Thread.currentThread().interrupt();
 - Many methods that throw InterruptedException, such as sleep, are designed to cancel their current operation and return immediately when an interrupt is received.
 ```
 try {
