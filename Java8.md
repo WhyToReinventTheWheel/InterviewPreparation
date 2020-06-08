@@ -83,6 +83,8 @@ public interface Predicate<T> {
 ```
 
 ## Methodreferences
-- Function<String, String> f = s -> s.toLowerCase() `===` Function<String, String> f = String::toLowerCase;
-- Consumer<String> c = s -> System.out.println(s)  `===` Consumer<String>c = System.out::println;
-- Comparator<Integer> c = (i1, i2) -> Integer.compare(i1, i2)  `===` Comparator<Integer> c = Integer::compare;
+```
+- Function<String, String> f = s -> s.toLowerCase() === Function<String, String> f = String::toLowerCase;
+- Consumer<String> c = s -> System.out.println(s)  === Consumer<String>c = System.out::println;
+- Comparator<Integer> c = (i1, i2) -> Integer.compare(i1, i2)  === Comparator<Integer> c = Integer::compare;
+```
