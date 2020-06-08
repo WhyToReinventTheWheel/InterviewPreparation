@@ -9,7 +9,7 @@
 ## The lambda syntax
 `anonymousclass`
 ```
-FileFilterfileFilter= newFileFilter() {
+FileFilterfileFilter = newFileFilter() {
 @Override
   public booleanaccept(File file){
   returnfile.getName().endsWith(".java");
@@ -31,15 +31,15 @@ Runnabler = () -> {
 ```
 
 ## Functionalinterfaces
-Whatisthe type of a lambda expression?
-Answer: a functionalinterface
-- A functionalinterface isan interface withonlyone abstractmethod
+What is the type of a lambda expression?
+Answer: a functional interface
+- A functional interface is an interface with only one abstractmethod
 ```
-public interfaceRunnable{
+public interface Runnable{
   run();
 };
 
-public interfaceComparator<T> {
+public interface Comparator<T> {
   intcompareTo(T t1, T t2);
 };
 
@@ -47,12 +47,8 @@ public interfaceComparator<T> {
 - How to make funtion interface
 ```
 @FunctionalInterface
-public interfaceMyFunctionalInterface{
+public interface MyFunctionalInterface{
   someMethod();
-  /**
-  * Somemore documentation
-  */
-  equals(Object o);
 };
 ```
 
@@ -60,22 +56,29 @@ public interfaceMyFunctionalInterface{
 - Supplier
 ```
 @FunctionalInterface
-publicinterfaceSupplier<T> {
+public interface Supplier<T> {
   T get();
 }
 ```
 - Consumer
 ```
 @FunctionalInterface
-publicinterfaceConsumer<T> {
+public interface Consumer<T> {
   void accept(T t);
 }
 ```
 - Predicate
 ```
 @FunctionalInterface
-publicinterfacePredicate<T> {
+public interface Predicate<T> {
   boolean test(T t);
+}
+```
+- Function
+```
+@FunctionalInterface
+ public interface Function<T, R> {
+    R apply(T t);
 }
 ```
 
