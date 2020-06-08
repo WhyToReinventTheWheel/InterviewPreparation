@@ -9,6 +9,15 @@
 - Deadlock
 - Thread dump analyzer
 
+## Thread Life Cycle
+
+New -> Runnable -> Running -> Terminated           
+			|-> Waiting -> Terminated  
+- New = new Thread()
+- Runnable = start()
+- waiting = sleep() , wait()
+- Terminated = completes its task or otherwise terminates.
+
 ## Thread Creation
 
 - Anonymous
