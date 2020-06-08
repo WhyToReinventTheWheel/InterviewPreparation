@@ -1,4 +1,5 @@
 # Topic
+- https://docs.oracle.com/javase/tutorial/essential/concurrency
 - http://tutorials.jenkov.com/java-concurrency/index.html
 - Basic Thread Concept
 	- Volatile, Join, Synchronization, Lock, wait and notify,Latch, Thread Local, Cyclic barrier, Semaphores, Mutex, Atomic Variable
