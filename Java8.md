@@ -6,7 +6,7 @@
 - Nashorn, a new Javascriptenginefor the JVM
 
 # Lambda expressions and Interfaces
-## The lambda syntax
+### The lambda syntax
 `anonymousclass`
 ```
 FileFilterfileFilter = newFileFilter() {
@@ -30,7 +30,7 @@ Runnabler = () -> {
 };
 ```
 
-## Functionalinterfaces
+### Functionalinterfaces
 What is the type of a lambda expression?
 Answer: a functional interface
 - A functional interface is an interface with only one abstractmethod
@@ -82,4 +82,4 @@ public interface Predicate<T> {
 }
 ```
 
-## Methodreferences
+### Methodreferences
