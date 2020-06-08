@@ -33,6 +33,7 @@ Thread t = new Thread(new Runnable() {
 Runnable runnable = () -> {}
 ```
 ## volatile vs synchronized:
+- Changes to a volatile variable are always visible to other threads. 
 ```
 class SharedObj
 {
@@ -49,6 +50,24 @@ Visibility: It means that changes made by one thread to shared data are visible 
 Java’s synchronized keyword guarantees both mutual exclusion and visibility. If we make the blocks of threads that modifies the value of shared variable synchronized only one thread can enter the block and changes made by it will be reflected in the main memory. All other thread trying to enter the block at the same time will be blocked and put to sleep.
 
 In some cases we may only desire the visibility and not atomicity. Use of synchronized in such situation is an overkill and may cause scalability problems. Here volatile comes to the rescue. Volatile variables have the visibility features of synchronized but not the atomicity features. The values of volatile variable will never be cached and all writes and reads will be done to and from the main memory. However, use of volatile is limited to very restricted set of cases as most of the times atomicity is desired. For example a simple increment statement such as x = x + 1; or x++ seems to be a single operation but is s really a compound read-modify-write sequence of operations that must execute atomically.
+
+## synchronized 
+```
+public void addName(String name) {
+    synchronized(this) {}
+}
+```
+```
+public class MsLunch {
+    private long c1 = 0;
+    private Object lock1 = new Object();
+    public void inc1() {
+        synchronized(lock1) {
+            c1++;
+        }
+    }
+} 
+```
 
 ## Daemon Threads
 User threads are high-priority threads. The JVM will wait for any user thread to complete its task before terminating it.
