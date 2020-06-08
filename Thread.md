@@ -68,6 +68,26 @@ public class MsLunch {
     }
 } 
 ```
+## ThreadLocal
+The Java ThreadLocal class enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to the same ThreadLocal variable, the two threads cannot see each other's ThreadLocal variables. Thus, the Java ThreadLocal class provides a simple way to make code thread safe that would not otherwise be so.
+```
+public class MyRunnable implements Runnable {
+    private ThreadLocal<Integer> threadLocal = new ThreadLocal<Integer>();
+    @Override
+    public void run() {
+        threadLocal.set( (int) (Math.random() * 100D) );
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        }
+        System.out.println(threadLocal.get());
+    }
+}
+```
+- threadLocal.remove();
+
+## Atomic Variables
+The java.util.concurrent.atomic package defines classes that support atomic operations on single variables. All classes have get and set methods that work like reads and writes on volatile variables. That is, a set has a happens-before relationship with any subsequent get on the same variable. The atomic compareAndSet method also has these memory consistency features, as do the simple atomic arithmetic methods that apply to integer atomic variables.
 
 ## Daemon Threads
 User threads are high-priority threads. The JVM will wait for any user thread to complete its task before terminating it.
@@ -83,6 +103,16 @@ NewThread daemonThread = new NewThread();
 daemonThread.setDaemon(true);
 daemonThread.start();
 ```
+
+## Thread Deadlock
+A deadlock is when two or more threads are blocked waiting to obtain locks that some of the other threads in the deadlock are holding. Deadlock can occur when multiple threads need the same locks, at the same time, but obtain them in different order.
+
+For instance, if thread 1 locks A, and tries to lock B, and thread 2 has already locked B, and tries to lock A, a deadlock arises. Thread 1 can never get B, and thread 2 can never get A. In addition, neither of them will ever know. They will remain blocked on each their object, A and B, forever. This situation is a deadlock.
+
+The situation is illustrated below:
+
+Thread 1  locks A, waits for B
+Thread 2  locks B, waits for A
 
 ## Interrupts
 - public void interrupt() Interrupts this thread.  // thread.interrupt() 
