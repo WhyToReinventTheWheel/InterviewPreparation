@@ -113,7 +113,54 @@ try {
 ```
 ## Blocking Queues
 A blocking queue is a queue that blocks when you try to dequeue from it and the queue is empty, or if you try to `enqueue` items to it and the queue is already full. A thread trying to `dequeue` from an empty queue is blocked until some other thread inserts an item into the queue. A thread trying to enqueue an item in a full queue is blocked until some other thread makes space in the queue, either by dequeuing one or more items or clearing the queue completely.
+- BlockingQueue Implementations
+ - ArrayBlockingQueue
+ - DelayQueue
+ - LinkedBlockingQueue
+ - PriorityBlockingQueue
+ - SynchronousQueue
+ ```
+BlockingQueue queue = new ArrayBlockingQueue(1024);
+Producer producer = new Producer(queue);
+Consumer consumer = new Consumer(queue);
+new Thread(producer).start();
+new Thread(consumer).start();
+ ```
+```
+public class Producer implements Runnable{
+    private BlockingQueue queue = null;
+    public Producer(BlockingQueue queue) {
+        this.queue = queue;
+    }
+    public void run() {
+        try {
+		while(true)
+            		queue.put("1");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+ 
+```
+public class Consumer implements Runnable{
+    private BlockingQueue queue = null;
+    public Consumer(BlockingQueue queue) {
+        this.queue = queue;
+    }
+    public void run() {
+        try {
+       		while(true)
+       			System.out.println(queue.take());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+```
 
+
+ 
 ## ThreadLocal
 The Java ThreadLocal class enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to the same ThreadLocal variable, the two threads cannot see each other's ThreadLocal variables. Thus, the Java ThreadLocal class provides a simple way to make code thread safe that would not otherwise be so.
 ```
@@ -165,6 +212,7 @@ Thread 2  locks B, waits for A
  - Lock Timeout
  - Deadlock Detection
  	Deadlock detection is a heavier deadlock prevention mechanism aimed at cases in which lock ordering isn't possible, and lock timeout isn't feasible. Every time a thread takes a lock it is noted in a data structure (map, graph etc.) of threads and locks. Additionally, whenever a thread requests a lock this is also noted in this data structure.
+	
 ## Interrupts
 - public void interrupt() Interrupts this thread.  // thread.interrupt() 
 - Thread.currentThread().interrupt();
